@@ -2,8 +2,6 @@
 *   email handling.
 }
 const
-  pi = 3.14159265358979323846;         {what it sounds like, don't touch}
-  pi2 = pi * 2.0;                      {2 Pi}
 {
 *   Error status values related to the EMAIL subsystem.
 }
@@ -244,6 +242,12 @@ procedure email_adr_tkdel (            {delete token from email address}
 
 procedure email_adr_translate (        {xlate email address thru mail.adr env files}
   in out  adr: email_adr_t);           {email address descriptor to translate}
+  val_param; extern;
+
+procedure inet_cstr_crlf_put (         {send CRLF terminated string, C format}
+  in      cstr: univ string;           {string, NULL terminated, no CRLF}
+  in out  conn: file_conn_t;           {handle to internet stream to write to}
+  out     stat: sys_err_t);            {returned completion status code}
   val_param; extern;
 
 procedure inet_disconnect (            {disconnect from remote system}

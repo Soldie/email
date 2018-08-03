@@ -1,4 +1,16 @@
 email_adr.obj
 email_adr_extract.obj
 email_adr_translate.obj
+inet.obj
+inet_sys.obj
 smtp_client.obj
+smtp_client_thread.obj
+smtp_queue.obj
+smtp_queue_read.obj
+smtp_queue_write.obj
+smtp_recv.obj
+smtp_rinfo.obj
+smtp_rqmeth.obj
+smtp_send.obj
+smtp_send_queue.obj
+smtp_subs.obj
