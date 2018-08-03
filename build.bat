@@ -18,6 +18,9 @@ sst %libname%.insall.pas -show_unused 0 -local_ins -ins %libname%.ins.pas
 copya %libname%.insall.c (cog)lib/%libname%.h
 del %libname%.insall.c
 
+call src_pas %srclib% email_adr %1
+call src_pas %srclib% email_adr_extract %1
+call src_pas %srclib% email_adr_translate %1
 call src_pas %srclib% smtp_client %1
 
 rem call src_pas %srclib% smtp_client_thread %1
